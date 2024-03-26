@@ -1,11 +1,29 @@
-const http = require('http');
+// Create web server
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, world!');
+
+
+
+
+
+// Load the http module to create an http server.
+var http = require('http');
+
+
+
+
+
+
+
+// Configure our HTTP server to respond with Hello World to all requests.
+var server = http.createServer(function (request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.end("Hello World\n");
 });
 
-server.listen(3000, 'localhost', () => {
-    console.log('Server running at http://localhost:3000/');
-});
+
+
+
+
+
+
+
